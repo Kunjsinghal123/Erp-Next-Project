@@ -1,0 +1,17 @@
+Module,Component,Task Description,Priority,Status,Progress (%),Estimated Hours,Dependencies,Notes
+Appraisal Setup,pms_appraisal_cycle,Define cycle start/end dates and appraisal timelines,High,In Progress,50,8,None,Core configuration for all appraisals
+Appraisal Setup,pms_supervisor_reviewer_mapping,Establish hierarchies and reporting lines for reviews,High,In Progress,60,12,None,Ensure no circular dependencies
+Appraisal Core,pms_appraisal,Main appraisal document tracking scores and feedback,High,In Progress,40,24,pms_appraisal_cycle,Core employee facing module
+Appraisal Core,pms_target,Define individual KPIs and objectives,High,In Progress,70,16,pms_appraisal,Linked to employee targets
+Appraisal Core,pms_competency_score,Evaluate behavior and skill competencies,Medium,In Progress,50,12,pms_appraisal,Competency matrix integration
+PERC Module,perc_case,Manage performance evaluation review committee cases,High,In Progress,30,20,pms_appraisal,Workflow for disputed/low scores
+PERC Module,perc_committee_member,Manage members for PERC review panels,Medium,In Progress,40,8,None,Role management for committee
+Backend Engine,scoring_engine.py,Calculate final weighted scores based on targets and competencies,Critical,In Progress,60,16,pms_target & competency,Complex calculation logic
+Backend Engine,check_errors.py,Validation checks for missing scores and invalid hierarchies,High,In Progress,40,10,None,Data integrity checks
+System Setup,setup_hr_admin.py,Initialize HR Admin roles and permissions,Medium,In Progress,80,6,None,Role-based access control setup
+System Setup,setup_print_formats.py,Configure standard print formats for completed appraisals,Low,In Progress,20,12,pms_appraisal,PDF generation for records
+Database/Utils,remove_pms_db.py,Scripts for cleaning up development data/schema,Low,Completed,100,4,None,Development utility script
+Reporting,pms_score_analysis,Dashboard analyzing organizational score distribution,Medium,In Progress,30,16,scoring_engine.py,Chart and analytics rendering
+Reporting,pms_completion_report,Track appraisal submission status by department,Medium,In Progress,50,12,pms_appraisal,Monitor workflow bottlenecks
+Reporting,pms_employee_report,Detailed individual performance breakdown,Medium,Planned,0,16,pms_appraisal,Printable format for employees
+Reporting,pms_department_report,Aggregate metrics and scores per department,Low,Planned,0,14,pms_score_analysis,Management summary view

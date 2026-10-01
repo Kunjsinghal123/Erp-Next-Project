@@ -1,0 +1,12 @@
+Category,Item,Description,Status
+DocType,pms_appraisal_cycle,Defines the period and timelines for the appraisal cycle.,In Progress
+DocType,pms_appraisal,Main document for employee performance appraisal.,In Progress
+DocType,pms_target,Tracks individual goals/targets for the appraisal period.,In Progress
+DocType,pms_competency_score,Records competency ratings for employees.,In Progress
+DocType,pms_supervisor_reviewer_mapping,Maps employees to their respective supervisors and reviewers.,In Progress
+DocType,perc_case,Manages PERC (Performance Evaluation Review Committee) cases.,In Progress
+DocType,perc_committee_member,Manages the members of the PERC committee.,In Progress
+Report,pms_score_analysis,Detailed analysis of appraisal scores across the organization.,Development Ongoing
+Report,pms_completion_report,Tracks the completion status of appraisals across departments.,Development Ongoing
+Report,pms_employee_report,Individual performance report for an employee.,Planned
+Report,pms_department_report,Aggregated performance metrics for a specific department.,Planned
