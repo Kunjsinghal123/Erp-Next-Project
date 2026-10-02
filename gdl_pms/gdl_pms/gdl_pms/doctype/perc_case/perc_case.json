@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-08-20 15:13:26.977366",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "appraisal",
+  "raised_by",
+  "justification",
+  "committee_members",
+  "hearing_notes",
+  "final_score",
+  "minutes_attachment",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "appraisal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Appraisal",
+   "options": "PMS Appraisal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "raised_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Raised By",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "justification",
+   "fieldtype": "Text Editor",
+   "label": "Justification",
+   "reqd": 1
+  },
+  {
+   "fieldname": "committee_members",
+   "fieldtype": "Table",
+   "label": "Committee Members",
+   "options": "PERC Committee Member"
+  },
+  {
+   "fieldname": "hearing_notes",
+   "fieldtype": "Text Editor",
+   "label": "Hearing Notes"
+  },
+  {
+   "fieldname": "final_score",
+   "fieldtype": "Float",
+   "label": "Final Score"
+  },
+  {
+   "fieldname": "minutes_attachment",
+   "fieldtype": "Attach",
+   "label": "Minutes Attachment"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nOpen\nResolved"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-20 15:52:40.594529",
+ "modified_by": "Administrator",
+ "module": "GDL PMS",
+ "name": "PERC Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

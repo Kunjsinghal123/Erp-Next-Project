@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 0,
+ "allow_rename": 0,
+ "autoname": "field:calendar_year",
+ "creation": "2026-09-22 17:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "calendar_year",
+  "timeline_summary_html",
+  "performance_plan_section",
+  "employee_submission_deadline",
+  "column_break_pp",
+  "supervisor_approval_deadline",
+  "reviewer_approval_deadline",
+  "appraisal_section",
+  "enable_appraisal_timeline",
+  "self_scoring_start_date",
+  "self_scoring_end_date",
+  "column_break_appr",
+  "supervisor_appraisal_end_date",
+  "reviewer_appraisal_end_date",
+  "notes_section",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "calendar_year",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Calendar Year",
+   "options": "2026\n2027\n2028\n2029\n2030\n2031\n2032\n2033\n2034\n2035",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "timeline_summary_html",
+   "fieldtype": "HTML",
+   "label": "Timeline Overview"
+  },
+  {
+   "fieldname": "performance_plan_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Plan Timeline"
+  },
+  {
+   "description": "Last date for employees to submit their performance plan",
+   "fieldname": "employee_submission_deadline",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Employee End Date for Submission",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Last date for supervisors to approve submitted performance plans",
+   "fieldname": "supervisor_approval_deadline",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Supervisor End Date for Approval",
+   "reqd": 1
+  },
+  {
+   "description": "Last date for reviewers to approve performance plans",
+   "fieldname": "reviewer_approval_deadline",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Reviewer End Date for Approval",
+   "reqd": 1
+  },
+  {
+   "fieldname": "appraisal_section",
+   "fieldtype": "Section Break",
+   "label": "Appraisal Timeline (Self-Scoring & Review)"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_appraisal_timeline",
+   "fieldtype": "Check",
+   "label": "Enable Appraisal Timeline"
+  },
+  {
+   "depends_on": "eval:doc.enable_appraisal_timeline==1",
+   "description": "Start date for employees to begin self-scoring",
+   "fieldname": "self_scoring_start_date",
+   "fieldtype": "Date",
+   "label": "Self-Scoring Start Date"
+  },
+  {
+   "depends_on": "eval:doc.enable_appraisal_timeline==1",
+   "description": "Last date for employees to complete and submit self-scoring",
+   "fieldname": "self_scoring_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Employee End Date for Self-Scoring"
+  },
+  {
+   "fieldname": "column_break_appr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.enable_appraisal_timeline==1",
+   "description": "Last date for supervisors to complete appraisal evaluation",
+   "fieldname": "supervisor_appraisal_end_date",
+   "fieldtype": "Date",
+   "label": "Supervisor End Date for Appraisal Review"
+  },
+  {
+   "depends_on": "eval:doc.enable_appraisal_timeline==1",
+   "description": "Last date for reviewers to complete appraisal evaluation",
+   "fieldname": "reviewer_appraisal_end_date",
+   "fieldtype": "Date",
+   "label": "Reviewer End Date for Appraisal Review"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Instructions & Notes"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Guidelines / Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-22 17:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GDL PMS",
+ "name": "PMS Calendar",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "calendar_year",
+ "show_title_field_in_link": 1,
+ "sort_field": "calendar_year",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "calendar_year",
+ "track_changes": 1
+}

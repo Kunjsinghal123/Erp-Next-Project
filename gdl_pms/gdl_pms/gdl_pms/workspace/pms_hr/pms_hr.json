@@ -1,0 +1,173 @@
+{
+ "app": "gdl_pms",
+ "charts": [],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Employee Management\", \"level\": 2}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Employees\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Add Employee\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Approval History\"}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Active Employees\"}}, {\"type\": \"header\", \"data\": {\"text\": \"PMS Dashboard\", \"level\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Employees\"}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Cycles\"}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending PERC\"}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Completion Rate\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pending For Approval\"}}, {\"type\": \"header\", \"data\": {\"text\": \"PMS Reports & Analytics\", \"level\": 2}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"PMS Completion Report\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"PMS Score Analysis\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"PMS Employee Report\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"PMS Office Report\"}}, {\"type\": \"card\", \"data\": {\"card_name\": \"PMS Reports\"}}]",
+ "creation": "2026-08-27 12:48:43.733997",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "award",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "PMS HR",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "icon": "report",
+   "is_query_report": 0,
+   "label": "PMS Reports",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "PMS Completion Report",
+   "link_count": 0,
+   "link_to": "PMS Completion Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "PMS Score Analysis",
+   "link_count": 0,
+   "link_to": "PMS Score Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "PMS Employee Report",
+   "link_count": 0,
+   "link_to": "PMS Employee Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "PMS Office Report",
+   "link_count": 0,
+   "link_to": "PMS Office Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "PMS Office Report",
+   "link_count": 0,
+   "link_to": "PMS Office Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-09-27 02:51:32.032309",
+ "modified_by": "Administrator",
+ "module": "GDL PMS",
+ "name": "PMS HR",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "HR Admin"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Employees",
+   "link_to": "Employee",
+   "stats_filter": "[[\"Employee\",\"status\",\"=\",\"Active\",false]]",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "Add Employee",
+   "link_to": "Employee",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Pending For Approval",
+   "link_to": "PMS Appraisal",
+   "stats_filter": "[[\"PMS Appraisal\",\"plan_status\",\"in\",[\"Pending Supervisor Approval\",\"Pending Reviewer Approval\"]]]",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Approval History",
+   "link_to": "PMS Appraisal",
+   "stats_filter": "[[\"PMS Appraisal\",\"plan_status\",\"in\",[\"Approved\", \"Rejected\"]]]",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "PMS Completion Report",
+   "link_to": "PMS Completion Report",
+   "report_ref_doctype": "PMS Appraisal",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "PMS Score Analysis",
+   "link_to": "PMS Score Analysis",
+   "report_ref_doctype": "PMS Appraisal",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "PMS Employee Report",
+   "link_to": "PMS Employee Report",
+   "report_ref_doctype": "PMS Appraisal",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "PMS Office Report",
+   "link_to": "PMS Office Report",
+   "report_ref_doctype": "PMS Appraisal",
+   "type": "Report"
+  },
+  {
+   "doc_view": "List",
+   "label": "Plan Amendments",
+   "link_to": "PMS Plan Amendment",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "PMS Calendar",
+   "link_to": "PMS Calendar",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "PMS Office Report",
+   "link_to": "PMS Office Report",
+   "report_ref_doctype": "PMS Appraisal",
+   "type": "Report"
+  }
+ ],
+ "title": "PMS HR",
+ "type": "Workspace"
+}

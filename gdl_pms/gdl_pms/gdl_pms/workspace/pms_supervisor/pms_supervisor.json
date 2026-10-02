@@ -1,0 +1,55 @@
+{
+ "app": "gdl_pms",
+ "charts": [],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Supervisor Evaluation & Approvals\", \"level\": 2}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Team Performance Plans\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pending Appraisal Reviews\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Plan Amendments\"}}]",
+ "creation": "2026-08-27 12:48:43.753953",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "users",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "PMS Supervisor",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-10-01 02:19:23.616461",
+ "modified_by": "Administrator",
+ "module": "GDL PMS",
+ "name": "PMS Supervisor",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Supervisor"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Team Performance Plans",
+   "link_to": "PMS Appraisal",
+   "stats_filter": "[[\"PMS Appraisal\",\"appraisal_status\",\"=\",\"Not Activated\"]]",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Pending Appraisal Reviews",
+   "link_to": "PMS Appraisal",
+   "stats_filter": "[[\"PMS Appraisal\",\"appraisal_status\",\"=\",\"Pending Supervisor Review\"]]",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Plan Amendments",
+   "link_to": "PMS Plan Amendment",
+   "type": "DocType"
+  }
+ ],
+ "title": "PMS Supervisor",
+ "type": "Workspace"
+}

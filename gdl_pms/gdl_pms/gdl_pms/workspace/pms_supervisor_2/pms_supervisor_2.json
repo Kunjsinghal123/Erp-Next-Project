@@ -1,0 +1,53 @@
+{
+ "app": "gdl_pms",
+ "charts": [],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Supervisor 2 Monitoring Dashboard\", \"level\": 2}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Monitored Performance Plans\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Plan Amendments\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Appraisal Cycles\"}}]",
+ "creation": "2026-09-14 01:08:03.057837",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "eye",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "PMS Supervisor 2",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-09-26 17:18:45.994568",
+ "modified_by": "Administrator",
+ "module": "GDL PMS",
+ "name": "PMS Supervisor 2",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Supervisor 2"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Monitored Performance Plans",
+   "link_to": "PMS Appraisal",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Plan Amendments",
+   "link_to": "PMS Plan Amendment",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Appraisal Cycles",
+   "link_to": "PMS Appraisal Cycle",
+   "type": "DocType"
+  }
+ ],
+ "title": "PMS Supervisor 2",
+ "type": "Workspace"
+}

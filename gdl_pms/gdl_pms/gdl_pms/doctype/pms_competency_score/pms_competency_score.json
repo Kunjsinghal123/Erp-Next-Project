@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-09-03 12:56:21.051842",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "competency",
+  "weight",
+  "self_rating",
+  "self_remark",
+  "supervisor_rating",
+  "supervisor_remark",
+  "reviewer_rating",
+  "reviewer_remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "competency",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Competency",
+   "options": "Job Knowledge & Skills\nQuality of Work\nCommunication & Teamwork\nInitiative & Problem Solving\nAttendance & Punctuality",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weight",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "self_rating",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Self Rating"
+  },
+  {
+   "fieldname": "self_remark",
+   "fieldtype": "Small Text",
+   "label": "Self Remark",
+   "in_list_view": 0,
+   "columns": 2,
+   "hidden": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "supervisor_rating",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Supervisor Rating"
+  },
+  {
+   "fieldname": "supervisor_remark",
+   "fieldtype": "Small Text",
+   "label": "Supervisor Remark"
+  },
+  {
+   "columns": 1,
+   "fieldname": "reviewer_rating",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Reviewer Rating"
+  },
+  {
+   "fieldname": "reviewer_remark",
+   "fieldtype": "Small Text",
+   "label": "Reviewer Remark"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-19 03:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GDL PMS",
+ "name": "PMS Competency Score",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

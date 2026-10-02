@@ -1,0 +1,347 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "format:PMS-{YYYY}-{MM}-{#####}",
+ "creation": "2026-09-03 12:56:21.077122",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "grade_group",
+  "cycle",
+  "supervisor_snapshot",
+  "supervisor_name",
+  "reviewer_snapshot",
+  "reviewer_name",
+  "supervisor_2_snapshot",
+  "supervisor_2_name",
+  "plan_status",
+  "workflow_state",
+  "appraisal_status",
+  "amendment_window_open",
+  "total_score",
+  "rating_band",
+  "dispute_flag",
+  "dispute_reason",
+  "locked",
+  "perc_case",
+  "plan_rejection_remark",
+  "plan_revision_remark",
+  "revised_by_role",
+  "employee_overall_remarks",
+  "supervisor_overall_remarks",
+  "reviewer_overall_remarks",
+  "targets",
+  "competencies",
+  "plan_history_section",
+  "plan_history_html"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grade_group",
+   "fieldtype": "Data",
+   "label": "Grade Group",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cycle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cycle",
+   "options": "PMS Appraisal Cycle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supervisor_snapshot",
+   "fieldtype": "Data",
+   "label": "Supervisor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "supervisor_name",
+   "fieldtype": "Data",
+   "label": "Supervisor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewer_snapshot",
+   "fieldtype": "Data",
+   "label": "Reviewer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewer_name",
+   "fieldtype": "Data",
+   "label": "Reviewer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "supervisor_2_snapshot",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Supervisor 2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "supervisor_2_name",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Supervisor 2 Name",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "plan_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Plan Status",
+   "options": "Draft\nPending Supervisor Approval\nPending Reviewer Approval\nApproved\nReturned\nRejected\nMonitoring",
+   "read_only": 1
+  },
+  {
+   "default": "Planning Open",
+   "fieldname": "workflow_state",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Workflow State",
+   "options": "Planning Open\nMonitoring\nAppraisal Open\nAppraisal Completed",
+   "read_only": 1
+  },
+  {
+   "default": "Not Activated",
+   "fieldname": "appraisal_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Appraisal Status",
+   "options": "Not Activated\nSelf-Assessment Pending\nPending Supervisor Review\nPending Employee Acceptance\nDisputed - Pending Reviewer\nReviewer Resolved - Pending Employee Decision\nUnder PERC Review\nAppraisal Accepted\nFinalized & Locked",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "amendment_window_open",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Amendment Window Open",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_score",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Total Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rating_band",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Rating Band",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "dispute_flag",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Disputed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dispute_reason",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Employee Dispute Reason",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "locked",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Appraisal Locked",
+   "read_only": 1
+  },
+  {
+   "fieldname": "perc_case",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "PERC Case",
+   "options": "PERC Case",
+   "read_only": 1
+  },
+  {
+   "fieldname": "plan_rejection_remark",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Plan Return Remark"
+  },
+  {
+   "fieldname": "plan_revision_remark",
+   "fieldtype": "Small Text",
+   "label": "Supervisor / Reviewer Revision Remark"
+  },
+  {
+   "fieldname": "revised_by_role",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Revised By Role",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee_overall_remarks",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Employee Overall Self-Remarks"
+  },
+  {
+   "fieldname": "supervisor_overall_remarks",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Supervisor Overall Remarks"
+  },
+  {
+   "fieldname": "reviewer_overall_remarks",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Reviewer Overall Remarks"
+  },
+  {
+   "fieldname": "targets",
+   "fieldtype": "Table",
+   "label": "Targets",
+   "options": "PMS Target"
+  },
+  {
+   "fieldname": "competencies",
+   "fieldtype": "Table",
+   "label": "Competencies",
+   "options": "PMS Competency Score"
+  },
+  {
+   "fieldname": "plan_history_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Plan History & Audit Trail"
+  },
+  {
+   "fieldname": "plan_history_html",
+   "fieldtype": "HTML",
+   "label": "Plan History"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-19 03:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "GDL PMS",
+ "name": "PMS Appraisal",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supervisor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Reviewer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supervisor 2",
+   "share": 0,
+   "write": 0
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "employee,employee_name,cycle",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_views": 1,
+ "states": []
+}

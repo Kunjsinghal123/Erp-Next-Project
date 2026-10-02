@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "field:cycle_name",
+ "creation": "2026-08-20 15:13:26.679570",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cycle_name",
+  "calendar_year",
+  "cycle_type",
+  "start_date",
+  "end_date",
+  "status",
+  "amendment_window_open",
+  "grade_group",
+  "applicable_employees_section",
+  "employee_summary_html",
+  "applicable_employees"
+ ],
+ "fields": [
+  {
+   "fieldname": "cycle_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cycle Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "calendar_year",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Calendar Year",
+   "options": "\n2026\n2027\n2028\n2029\n2030\n2031\n2032\n2033\n2034\n2035"
+  },
+  {
+   "fieldname": "cycle_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Cycle Type",
+   "options": "Annual\nHalf-Yearly\nProbation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nPlanning Open\nMonitoring\nSelf-Rating Open\nClosed"
+  },
+  {
+   "default": "0",
+   "fieldname": "amendment_window_open",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Amendment Window Open"
+  },
+  {
+   "default": "All",
+   "fieldname": "grade_group",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Grade Group",
+   "options": "PS_CS\nOS_ESP\nAll",
+   "reqd": 1
+  },
+  {
+   "fieldname": "applicable_employees_section",
+   "fieldtype": "Section Break",
+   "label": "Applicable Employees & Reporting Hierarchy"
+  },
+  {
+   "fieldname": "employee_summary_html",
+   "fieldtype": "HTML",
+   "label": "Summary Overview"
+  },
+  {
+   "fieldname": "applicable_employees",
+   "fieldtype": "Table",
+   "label": "Applicable Employees",
+   "options": "PMS Appraisal Cycle Employee"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-12 01:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "GDL PMS",
+ "name": "PMS Appraisal Cycle",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  },
+  {
+   "read": 1,
+   "role": "Supervisor"
+  },
+  {
+   "read": 1,
+   "role": "Reviewer"
+  },
+  {
+   "read": 1,
+   "role": "Supervisor 2"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "cycle_name"
+}

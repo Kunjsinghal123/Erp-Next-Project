@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "format:AMEND-{performance_plan}-{amendment_number}",
+ "creation": "2026-09-08 13:55:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "performance_plan",
+  "amendment_number",
+  "revision_date",
+  "employee",
+  "employee_name",
+  "cycle",
+  "grade_group",
+  "supervisor_snapshot",
+  "reviewer_snapshot",
+  "supervisor_2_snapshot",
+  "status",
+  "reason",
+  "previous_total_weight",
+  "revised_total_weight",
+  "supervisor_remark",
+  "reviewer_remark",
+  "previous_targets",
+  "revised_targets",
+  "approval_history"
+ ],
+ "fields": [
+  {
+   "fieldname": "performance_plan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Performance Plan",
+   "options": "PMS Appraisal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amendment_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Amendment Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "revision_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Revision Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "performance_plan.employee",
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "performance_plan.cycle",
+   "fieldname": "cycle",
+   "fieldtype": "Link",
+   "label": "Cycle",
+   "options": "PMS Appraisal Cycle",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "performance_plan.grade_group",
+   "fieldname": "grade_group",
+   "fieldtype": "Data",
+   "label": "Grade Group",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "performance_plan.supervisor_snapshot",
+   "fieldname": "supervisor_snapshot",
+   "fieldtype": "Data",
+   "label": "Supervisor",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "performance_plan.reviewer_snapshot",
+   "fieldname": "reviewer_snapshot",
+   "fieldtype": "Data",
+   "label": "Reviewer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "performance_plan.supervisor_2_snapshot",
+   "fieldname": "supervisor_2_snapshot",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Supervisor 2",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nPending Supervisor Approval\nPending Reviewer Approval\nApproved\nReturned\nRejected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason for Amendment"
+  },
+  {
+   "fieldname": "previous_total_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Previous Total Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "revised_total_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Revised Total Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "supervisor_remark",
+   "fieldtype": "Small Text",
+   "label": "Supervisor Remark"
+  },
+  {
+   "fieldname": "reviewer_remark",
+   "fieldtype": "Small Text",
+   "label": "Reviewer Remark"
+  },
+  {
+   "fieldname": "previous_targets",
+   "fieldtype": "Code",
+   "label": "Previous Targets Snapshot",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "revised_targets",
+   "fieldtype": "Table",
+   "label": "Revised Targets",
+   "options": "PMS Target"
+  },
+  {
+   "fieldname": "approval_history",
+   "fieldtype": "Table",
+   "label": "Approval History Log",
+   "options": "PMS Amendment Log"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-18 02:11:08.955457",
+ "modified_by": "Administrator",
+ "module": "GDL PMS",
+ "name": "PMS Plan Amendment",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supervisor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Reviewer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Supervisor 2"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "performance_plan,employee,employee_name",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_views": 1
+}

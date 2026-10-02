@@ -1,0 +1,47 @@
+{
+ "app": "gdl_pms",
+ "charts": [],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"PMS Dashboard\", \"level\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Employees\"}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Cycles\"}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending PERC\"}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Completion Rate\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pending For Approval\"}}]",
+ "creation": "2026-08-27 12:48:43.762889",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "PMS PERC",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-09-26 17:18:46.017350",
+ "modified_by": "Administrator",
+ "module": "GDL PMS",
+ "name": "PMS PERC",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "PERC Member"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Administrator"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Pending For Approval",
+   "link_to": "PMS Appraisal",
+   "stats_filter": "[[\"PMS Appraisal\",\"plan_status\",\"in\",[\"Pending Supervisor Approval\",\"Pending Reviewer Approval\"]]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "PMS PERC",
+ "type": "Workspace"
+}

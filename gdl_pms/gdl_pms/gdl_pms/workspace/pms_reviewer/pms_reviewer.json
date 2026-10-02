@@ -1,0 +1,55 @@
+{
+ "app": "gdl_pms",
+ "charts": [],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Reviewer Validation & Disputes\", \"level\": 2}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Reviewer Plan Approvals\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Disputed Appraisals\"}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Plan Amendments\"}}]",
+ "creation": "2026-08-27 12:48:43.759021",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "check-square",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "PMS Reviewer",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-10-01 02:19:23.625934",
+ "modified_by": "Administrator",
+ "module": "GDL PMS",
+ "name": "PMS Reviewer",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Reviewer"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Reviewer Plan Approvals",
+   "link_to": "PMS Appraisal",
+   "stats_filter": "[[\"PMS Appraisal\",\"plan_status\",\"=\",\"Pending Reviewer Approval\"]]",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Disputed Appraisals",
+   "link_to": "PMS Appraisal",
+   "stats_filter": "[[\"PMS Appraisal\",\"appraisal_status\",\"=\",\"Disputed - Pending Reviewer\"]]",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Plan Amendments",
+   "link_to": "PMS Plan Amendment",
+   "type": "DocType"
+  }
+ ],
+ "title": "PMS Reviewer",
+ "type": "Workspace"
+}
